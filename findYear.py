@@ -23,8 +23,13 @@ def matchYear(inputString):
 
 
 def getAll():
+	f = open("record.txt","w")
 	totalFiles = 0 
-	num = [0,0,0,0,0,0,0,0,0,0,0]
+	num = []
+	i = 0
+	while (i<100):
+		num.append(0)
+		i += 1
 	pre_path = "/home/yoki/Desktop/data"
 	files= os.listdir(pre_path)
 	for file in files:
@@ -35,50 +40,15 @@ def getAll():
 		number = len(matchResult)
 		print(matchResult)
 		print(number)
-		if number <= 3:
-			num[0] += 1
-		elif number <= 6:
-			num[1] += 1
-		elif number <= 9:
-			num[2] += 1
-		elif number	<= 12:
-			num[3] += 1 
-		elif number <= 15:
-			num[4] += 1
-		elif number <= 18:
-			num[5] += 1 
-		elif number <= 21:
-			num[6] += 1
-		elif number <= 24:
-			num[7] += 1
-		elif number <= 27:
-			num[8] += 1
-		elif number <= 30:
-			num[9] += 1
-		else :
-			num[10] += 1
+		if number > 1000:
+			f.write(path+"\n")
+		if number >= 100:
+			continue
+		num[number] += 1
 
-		if number > 40:
-			print()
-			print()
-			print(path)
-			print()
-			print()
-
-
-
+	print(num)		
 	print(totalFiles)
-	print("0-3:",num[0])
-	print("3-6:",num[1])
-	print("6-9:",num[2])
-	print("9-12:",num[3])
-	print("12-15:",num[4])
-	print("15-18:",num[5])
-	print("18-21:",num[6])
-	print("21-24:",num[7])
-	print("24-27",num[8])
-	print("27-30",num[9])
-	print("more than 30:",num[10])
+	f.close()
 
 
 getAll()
