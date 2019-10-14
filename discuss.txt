@@ -1,0 +1,8 @@
+published date 2001/4/17 : 1286267.xml     42     HeidelTime : 42
+published date 1998/10/16: 1054360.xml     59     HeidelTime : 36
+
+REASON:  1. detect date from 1000-2999. Some values are not "year" but are still regconized as year, like "zip-code": 883-2468;
+	 2. x :
+
+If A certain year often mentioned, it might mean: something important must have happened in this year. In this logic, we can say, a topic/ event would be more important in such year than those are not, that is
+              P(e_i∣year)>P(e_i∣year′) 
