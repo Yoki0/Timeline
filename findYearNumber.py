@@ -53,4 +53,7 @@ def getAll():
 	f.close()
 
 
-getAll()
+# getAll()
+path = '/home/yoki/Github/findYear/Multiyears_docs/1054360.xml'
+string = getString(path)
+print(string)

@@ -8,7 +8,6 @@ from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 from sklearn.feature_extraction.text import CountVectorizer
 import numpy as np
-import seaborn as sns
 import os
 
 def getString(path):      # you give me path of .xml file, I'll give you return you text content
@@ -57,7 +56,7 @@ def create_wordcloud(texts):
 
 def get_doc():
 	doc_set = []
-	pre_path = "/home/yoki/Github/timeline/query/sports"
+	pre_path = "/home/yoki/Github/findYear/query/sports"
 	files= os.listdir(pre_path)
 	for file in files:
 		path = pre_path + "/" + file
